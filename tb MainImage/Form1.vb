@@ -1,36 +1,12 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class Form1
-    'Private onon As Boolean = False
-    'Private Zxy As Point
-    'Private Mxy As Point
-    'Private Const zz1 = "\d*"
     Private GiveIm As Boolean = True
     Private Lun As Integer = 3
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'FormBorderStyle = 0
-        'Me.ClientSize = New Size(220, 220)
         PictureBox1.ContextMenuStrip = ContextMenuStrip1
         PictureBox1.AllowDrop = True
     End Sub
-
-    'Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
-    '    Me.onon = True
-    '    Me.Zxy = New Point(e.X, e.Y)
-    'End Sub
-
-    'Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
-    '    Mxy = New Point(e.X, e.Y)
-    '    If Me.onon = True Then
-    '        Me.Location = PointToScreen(Mxy) - Me.Zxy
-    '        'Me.Location = Control.MousePosition - Me.Zxy
-    '    End If
-    'End Sub
-
-    'Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
-    '    Me.onon = False
-    'End Sub
-
 
     Declare Auto Function ReleaseCapture Lib "user32.dll" Alias "ReleaseCapture" () As Boolean
     'API ReleaseCapture函数是用来释放鼠标捕获的  
@@ -39,6 +15,7 @@ Public Class Form1
     Public Const WM_SYSCOMMAND As Integer = &H112&
     Public Const SC_MOVE As Integer = &HF010&
     Public Const HTCAPTION As Integer = &H2&
+
     Private Sub PictureBox1_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox1.MouseMove
         If e.Button = MouseButtons.Left Then
             ReleaseCapture()
