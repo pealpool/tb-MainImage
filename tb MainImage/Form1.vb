@@ -4,6 +4,7 @@ Public Class Form1
     'Private Zxy As Point
     'Private Mxy As Point
     'Private Const zz1 = "\d*"
+    Private GiveIm As Boolean = True
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'FormBorderStyle = 0
@@ -44,7 +45,17 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub PictureBox1_MouseEnter(sender As Object, e As EventArgs) Handles PictureBox1.MouseEnter
+        If GiveIm Then
+            PictureBox1.Image = Global.tb_MainImage.My.Resources.TBImgg
+        End If
+    End Sub
 
+    Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
+        If GiveIm Then
+            PictureBox1.Image = Global.tb_MainImage.My.Resources.TBImg
+        End If
+    End Sub
 
     Private Sub GbToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GbToolStripMenuItem.Click
         Application.Exit()
@@ -132,6 +143,7 @@ Public Class Form1
             bkimage = New Bitmap(temostr)
             'Me.Size = New System.Drawing.Size(bkimage.Width, bkimage.Height)
             PictureBox1.Image = bkimage
+            GiveIm = False
             If PictureBox1.Image.Height = PictureBox1.Image.Width Then
                 Me.Height = 220
                 Me.Width = 220
@@ -191,4 +203,5 @@ Public Class Form1
         Me.Width = PictureBox1.Image.Width
         Me.Height = PictureBox1.Image.Height
     End Sub
+
 End Class
