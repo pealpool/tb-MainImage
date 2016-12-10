@@ -26,23 +26,25 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.打开图片ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.取消置顶ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.显示边框ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DktpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QxdzToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.XsbgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.宝贝页主图ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.搜索页网格800800ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.直通车宝贝ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.直通车店铺ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.首页钻展ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.搜索页列表8080ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BbztToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SSywgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZtcbbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZtcdpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SyzzToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SSylbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PptpdxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
-        Me.确定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ByHHFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.关闭ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -52,6 +54,7 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
         Me.PictureBox1.Image = Global.tb_MainImage.My.Resources.Resources.TBImg
         Me.PictureBox1.InitialImage = Global.tb_MainImage.My.Resources.Resources.TBImg
@@ -64,68 +67,81 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.打开图片ToolStripMenuItem, Me.取消置顶ToolStripMenuItem, Me.显示边框ToolStripMenuItem, Me.ToolStripMenuItem1, Me.宝贝页主图ToolStripMenuItem, Me.搜索页网格800800ToolStripMenuItem, Me.直通车宝贝ToolStripMenuItem, Me.直通车店铺ToolStripMenuItem, Me.首页钻展ToolStripMenuItem, Me.搜索页列表8080ToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.确定ToolStripMenuItem, Me.ToolStripMenuItem3, Me.ByHHFToolStripMenuItem, Me.关闭ToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.BbztToolStripMenuItem, Me.SSywgToolStripMenuItem, Me.ZtcbbToolStripMenuItem, Me.ZtcdpToolStripMenuItem, Me.SyzzToolStripMenuItem, Me.SSylbToolStripMenuItem, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 358)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 386)
         '
-        '打开图片ToolStripMenuItem
+        'DktpToolStripMenuItem
         '
-        Me.打开图片ToolStripMenuItem.Name = "打开图片ToolStripMenuItem"
-        Me.打开图片ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.打开图片ToolStripMenuItem.Text = "打开图片"
+        Me.DktpToolStripMenuItem.Name = "DktpToolStripMenuItem"
+        Me.DktpToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.DktpToolStripMenuItem.Text = "打开图片"
         '
-        '取消置顶ToolStripMenuItem
+        'QxdzToolStripMenuItem
         '
-        Me.取消置顶ToolStripMenuItem.Name = "取消置顶ToolStripMenuItem"
-        Me.取消置顶ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.取消置顶ToolStripMenuItem.Text = "取消置顶"
+        Me.QxdzToolStripMenuItem.Checked = True
+        Me.QxdzToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.QxdzToolStripMenuItem.Name = "QxdzToolStripMenuItem"
+        Me.QxdzToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.QxdzToolStripMenuItem.Text = "置顶"
         '
-        '显示边框ToolStripMenuItem
+        'XsbgToolStripMenuItem
         '
-        Me.显示边框ToolStripMenuItem.Name = "显示边框ToolStripMenuItem"
-        Me.显示边框ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.显示边框ToolStripMenuItem.Text = "显示边框"
+        Me.XsbgToolStripMenuItem.Name = "XsbgToolStripMenuItem"
+        Me.XsbgToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.XsbgToolStripMenuItem.Text = "显示拉伸边框"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(188, 6)
         '
-        '宝贝页主图ToolStripMenuItem
+        'BbztToolStripMenuItem
         '
-        Me.宝贝页主图ToolStripMenuItem.Name = "宝贝页主图ToolStripMenuItem"
-        Me.宝贝页主图ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.宝贝页主图ToolStripMenuItem.Text = "宝贝页主图(400*400)"
+        Me.BbztToolStripMenuItem.Name = "BbztToolStripMenuItem"
+        Me.BbztToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.BbztToolStripMenuItem.Text = "宝贝页主图(400*400)"
         '
-        '搜索页网格800800ToolStripMenuItem
+        'SSywgToolStripMenuItem
         '
-        Me.搜索页网格800800ToolStripMenuItem.Name = "搜索页网格800800ToolStripMenuItem"
-        Me.搜索页网格800800ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.搜索页网格800800ToolStripMenuItem.Text = "搜索页网格(220*220)"
+        Me.SSywgToolStripMenuItem.Name = "SSywgToolStripMenuItem"
+        Me.SSywgToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.SSywgToolStripMenuItem.Text = "搜索页网格(220*220)"
         '
-        '直通车宝贝ToolStripMenuItem
+        'ZtcbbToolStripMenuItem
         '
-        Me.直通车宝贝ToolStripMenuItem.Name = "直通车宝贝ToolStripMenuItem"
-        Me.直通车宝贝ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.直通车宝贝ToolStripMenuItem.Text = "直通车宝贝(240*240)"
+        Me.ZtcbbToolStripMenuItem.Name = "ZtcbbToolStripMenuItem"
+        Me.ZtcbbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ZtcbbToolStripMenuItem.Text = "直通车宝贝(240*240)"
         '
-        '直通车店铺ToolStripMenuItem
+        'ZtcdpToolStripMenuItem
         '
-        Me.直通车店铺ToolStripMenuItem.Name = "直通车店铺ToolStripMenuItem"
-        Me.直通车店铺ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.直通车店铺ToolStripMenuItem.Text = "直通车店铺(219*327)"
+        Me.ZtcdpToolStripMenuItem.Name = "ZtcdpToolStripMenuItem"
+        Me.ZtcdpToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ZtcdpToolStripMenuItem.Text = "直通车店铺(219*327)"
         '
-        '首页钻展ToolStripMenuItem
+        'SyzzToolStripMenuItem
         '
-        Me.首页钻展ToolStripMenuItem.Name = "首页钻展ToolStripMenuItem"
-        Me.首页钻展ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.首页钻展ToolStripMenuItem.Text = "首页钻展(520*280)"
+        Me.SyzzToolStripMenuItem.Name = "SyzzToolStripMenuItem"
+        Me.SyzzToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.SyzzToolStripMenuItem.Text = "首页钻展(520*280)"
         '
-        '搜索页列表8080ToolStripMenuItem
+        'SSylbToolStripMenuItem
         '
-        Me.搜索页列表8080ToolStripMenuItem.Name = "搜索页列表8080ToolStripMenuItem"
-        Me.搜索页列表8080ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.搜索页列表8080ToolStripMenuItem.Text = "搜索页列表(80*80)"
+        Me.SSylbToolStripMenuItem.Name = "SSylbToolStripMenuItem"
+        Me.SSylbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.SSylbToolStripMenuItem.Text = "搜索页列表(80*80)"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(188, 6)
+        '
+        'PptpdxToolStripMenuItem
+        '
+        Me.PptpdxToolStripMenuItem.Name = "PptpdxToolStripMenuItem"
+        Me.PptpdxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.PptpdxToolStripMenuItem.Text = "匹配图片大小"
         '
         'ToolStripMenuItem2
         '
@@ -148,11 +164,11 @@ Partial Class Form1
         Me.ToolStripTextBox2.Size = New System.Drawing.Size(100, 23)
         Me.ToolStripTextBox2.Text = "自定义高度"
         '
-        '确定ToolStripMenuItem
+        'QdToolStripMenuItem
         '
-        Me.确定ToolStripMenuItem.Name = "确定ToolStripMenuItem"
-        Me.确定ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.确定ToolStripMenuItem.Text = "确定"
+        Me.QdToolStripMenuItem.Name = "QdToolStripMenuItem"
+        Me.QdToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.QdToolStripMenuItem.Text = "确定"
         '
         'ToolStripMenuItem3
         '
@@ -163,13 +179,13 @@ Partial Class Form1
         '
         Me.ByHHFToolStripMenuItem.Name = "ByHHFToolStripMenuItem"
         Me.ByHHFToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ByHHFToolStripMenuItem.Text = "By HHF 2016.12"
+        Me.ByHHFToolStripMenuItem.Text = "By HHF v2016.12"
         '
-        '关闭ToolStripMenuItem
+        'GbToolStripMenuItem
         '
-        Me.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem"
-        Me.关闭ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.关闭ToolStripMenuItem.Text = "关闭软件"
+        Me.GbToolStripMenuItem.Name = "GbToolStripMenuItem"
+        Me.GbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.GbToolStripMenuItem.Text = "关闭"
         '
         'OpenFileDialog1
         '
@@ -179,12 +195,14 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(204, 181)
+        Me.ClientSize = New System.Drawing.Size(220, 220)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "主图检视"
         Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
@@ -195,22 +213,24 @@ Partial Class Form1
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents 关闭ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 打开图片ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 取消置顶ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 显示边框ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GbToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DktpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QxdzToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents XsbgToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
-    Friend WithEvents 宝贝页主图ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 搜索页网格800800ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 直通车宝贝ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 直通车店铺ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 首页钻展ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 搜索页列表8080ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BbztToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SSywgToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZtcbbToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZtcdpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SyzzToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SSylbToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
     Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
     Friend WithEvents ToolStripTextBox2 As ToolStripTextBox
-    Friend WithEvents 确定ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QdToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As ToolStripSeparator
     Friend WithEvents ByHHFToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ToolStripMenuItem4 As ToolStripSeparator
+    Friend WithEvents PptpdxToolStripMenuItem As ToolStripMenuItem
 End Class
