@@ -5,6 +5,7 @@ Public Class Form1
     'Private Mxy As Point
     'Private Const zz1 = "\d*"
     Private GiveIm As Boolean = True
+    Private Lun As Integer = 3
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'FormBorderStyle = 0
@@ -69,9 +70,24 @@ Public Class Form1
     End Sub
 
     Private Sub QdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QdToolStripMenuItem.Click
-        'Dim ax, ay As Integer
-        'ax = ToolStripTextBox1.Text
-        'ay = ToolStripTextBox2.Text
+        Qd()
+    End Sub
+
+    Private Sub ToolStripTextBox2_KeyDown(sender As Object, e As KeyEventArgs) Handles ToolStripTextBox2.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Qd()
+            ContextMenuStrip1.Close()
+        End If
+    End Sub
+
+    Private Sub ToolStripTextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles ToolStripTextBox1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Qd()
+            ContextMenuStrip1.Close()
+        End If
+    End Sub
+
+    Private Sub Qd()
         If IsNumeric(ToolStripTextBox1.Text) And IsNumeric(ToolStripTextBox2.Text) Then
             ChangDX(ToolStripTextBox1.Text, ToolStripTextBox2.Text)
         Else
@@ -84,28 +100,54 @@ Public Class Form1
         Me.Height = DDDy
     End Sub
 
-    Private Sub BbztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BbztToolStripMenuItem.Click
+    Private Sub TbztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TbztToolStripMenuItem.Click
         ChangDX(400, 400)
+        Lun = 1
     End Sub
 
-    Private Sub SsywgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SSywgToolStripMenuItem.Click
+    Private Sub TmztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TmztToolStripMenuItem.Click
+        ChangDX(418, 418)
+        Lun = 2
+    End Sub
+
+    Private Sub TbwgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TbwgToolStripMenuItem.Click
         ChangDX(220, 220)
+        Lun = 3
     End Sub
 
-    Private Sub ZtcbbToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbToolStripMenuItem.Click
+    Private Sub TmwgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TmwgToolStripMenuItem.Click
+        ChangDX(210, 210)
+        Lun = 4
+    End Sub
+
+    Private Sub ZtcbbxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbxToolStripMenuItem.Click
         ChangDX(240, 240)
+        Lun = 5
     End Sub
 
-    Private Sub ZtcdpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpToolStripMenuItem.Click
-        ChangDX(219, 327)
+    Private Sub ZtcbbdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbdToolStripMenuItem.Click
+        ChangDX(270, 270)
+        Lun = 6
+    End Sub
+
+    Private Sub ZtcdpxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpxToolStripMenuItem.Click
+        ChangDX(210, 315)
+        Lun = 7
+    End Sub
+
+    Private Sub ZtcdpdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpdToolStripMenuItem.Click
+        ChangDX(250, 375)
+        Lun = 8
     End Sub
 
     Private Sub SyzzToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SyzzToolStripMenuItem.Click
         ChangDX(520, 280)
+        Lun = 9
     End Sub
 
     Private Sub SsylbToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SSylbToolStripMenuItem.Click
         ChangDX(80, 80)
+        Lun = 10
     End Sub
 
     Private Sub QxdzToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QxdzToolStripMenuItem.Click
@@ -147,12 +189,15 @@ Public Class Form1
             If PictureBox1.Image.Height = PictureBox1.Image.Width Then
                 Me.Height = 220
                 Me.Width = 220
-            ElseIf PictureBox1.Image.Height = 327 And PictureBox1.Image.Width = 219 Then
-                Me.Height = 327
-                Me.Width = 219
+                Lun = 3
+            ElseIf (PictureBox1.Image.Height = 315 And PictureBox1.Image.Width = 210) Or (PictureBox1.Image.Height = 375 And PictureBox1.Image.Width = 250) Then
+                Me.Height = 315
+                Me.Width = 210
+                Lun = 7
             ElseIf PictureBox1.Image.Height = 280 And PictureBox1.Image.Width = 520 Then
                 Me.Height = 280
                 Me.Width = 520
+                Lun = 9
             End If
         Catch ex As Exception
         End Try
@@ -181,6 +226,22 @@ Public Class Form1
             Else
                 Me.Left -= 1
             End If
+        ElseIf ModifierKeys = Keys.Shift Then
+            If e.Delta < 0 Then
+                If Lun >= 10 Then
+                    Lun = 1
+                Else
+                    Lun += 1
+                End If
+                SetDX(Lun)
+            Else
+                If Lun <= 1 Then
+                    Lun = 10
+                Else
+                    Lun -= 1
+                End If
+                SetDX(Lun)
+            End If
         Else
             If e.Delta > 0 Then
                 Me.Top += 1
@@ -190,8 +251,57 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub CleanC()
+        TbztToolStripMenuItem.Checked = False
+        TmztToolStripMenuItem.Checked = False
+        TbwgToolStripMenuItem.Checked = False
+        TmwgToolStripMenuItem.Checked = False
+        ZtcbbxToolStripMenuItem.Checked = False
+        ZtcbbdToolStripMenuItem.Checked = False
+        ZtcdpxToolStripMenuItem.Checked = False
+        ZtcdpdToolStripMenuItem.Checked = False
+        SyzzToolStripMenuItem.Checked = False
+        SSylbToolStripMenuItem.Checked = False
+    End Sub
+
+    Private Sub SetDX(L As Integer)
+        CleanC
+        Select Case L
+            Case 1
+                ChangDX(400, 400)
+                TbztToolStripMenuItem.Checked = True
+            Case 2
+                ChangDX(418, 418)
+                TmztToolStripMenuItem.Checked = True
+            Case 3
+                ChangDX(220, 220)
+                TbwgToolStripMenuItem.Checked = True
+            Case 4
+                ChangDX(210, 210)
+                TmwgToolStripMenuItem.Checked = True
+            Case 5
+                ChangDX(240, 240)
+                ZtcbbxToolStripMenuItem.Checked = True
+            Case 6
+                ChangDX(270, 270)
+                ZtcbbdToolStripMenuItem.Checked = True
+            Case 7
+                ChangDX(210, 315)
+                ZtcdpxToolStripMenuItem.Checked = True
+            Case 8
+                ChangDX(250, 375)
+                ZtcdpdToolStripMenuItem.Checked = True
+            Case 9
+                ChangDX(520, 280)
+                SyzzToolStripMenuItem.Checked = True
+            Case 10
+                ChangDX(80, 80)
+                SSylbToolStripMenuItem.Checked = True
+        End Select
+    End Sub
+
     Private Sub ByHHFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByHHFToolStripMenuItem.Click
-        MsgBox("▶ [　双击　]　　　　匹配原图大小" & vbCrLf & "▶ [鼠标滚轮]　　　　微调 上下" & vbCrLf & "▶ [Ctrl + 鼠标滚轮]　微调 左右" & vbCrLf & vbCrLf & "By HHF v2016.12", 0, "关于 主图检视 By HHF")
+        MsgBox("▶ [　双击　]　　　　匹配原图大小" & vbCrLf & "▶ [鼠标滚轮]　　　　微调 上下" & vbCrLf & "▶ [Ctrl + 鼠标滚轮]　微调 左右" & vbCrLf & "▶ [Shift + 鼠标滚轮]  选择大小" & vbCrLf & vbCrLf & "By HHF v2016.12", 0, "关于 主图检视 By HHF")
     End Sub
 
     Private Sub PptpdxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PptpdxToolStripMenuItem.Click
@@ -204,4 +314,49 @@ Public Class Form1
         Me.Height = PictureBox1.Image.Height
     End Sub
 
+    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+        CleanC()
+        Select Case Me.Height
+            Case 400
+                If Me.Width = 400 Then
+                    TbztToolStripMenuItem.Checked = True
+                End If
+            Case 418
+                If Me.Width = 418 Then
+                    TmztToolStripMenuItem.Checked = True
+                End If
+            Case 220
+                If Me.Width = 220 Then
+                    TbwgToolStripMenuItem.Checked = True
+                End If
+            Case 210
+                If Me.Width = 210 Then
+                    TmwgToolStripMenuItem.Checked = True
+                End If
+            Case 315
+                If Me.Width = 210 Then
+                    ZtcdpxToolStripMenuItem.Checked = True
+                End If
+            Case 240
+                If Me.Width = 240 Then
+                    ZtcbbxToolStripMenuItem.Checked = True
+                End If
+            Case 270
+                If Me.Width = 270 Then
+                    ZtcbbdToolStripMenuItem.Checked = True
+                End If
+            Case 375
+                If Me.Width = 250 Then
+                    ZtcdpdToolStripMenuItem.Checked = True
+                End If
+            Case 280
+                If Me.Width = 520 Then
+                    SyzzToolStripMenuItem.Checked = True
+                End If
+            Case 80
+                If Me.Width = 80 Then
+                    SSylbToolStripMenuItem.Checked = True
+                End If
+        End Select
+    End Sub
 End Class
