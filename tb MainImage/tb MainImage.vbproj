@@ -129,6 +129,7 @@
     <None Include="Resources\TBImg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\TBImgg.jpg" />
     <Content Include="ttb.ico" />
     <Content Include="zt.ico" />
   </ItemGroup>

@@ -55,7 +55,7 @@ Partial Class Form1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
+        Me.PictureBox1.ErrorImage = Global.tb_MainImage.My.Resources.Resources.TBImgg
         Me.PictureBox1.Image = Global.tb_MainImage.My.Resources.Resources.TBImg
         Me.PictureBox1.InitialImage = Global.tb_MainImage.My.Resources.Resources.TBImg
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
@@ -69,7 +69,7 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.BbztToolStripMenuItem, Me.SSywgToolStripMenuItem, Me.ZtcbbToolStripMenuItem, Me.ZtcdpToolStripMenuItem, Me.SyzzToolStripMenuItem, Me.SSylbToolStripMenuItem, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 386)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 364)
         '
         'DktpToolStripMenuItem
         '
