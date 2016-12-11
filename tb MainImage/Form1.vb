@@ -27,6 +27,50 @@ Public Class Form1
         If GiveIm Then
             PictureBox1.Image = Global.tb_MainImage.My.Resources.TBImgg
         End If
+        Select Case Me.Height
+            Case 400
+                If Me.Width = 400 Then
+                    ToolTip1.SetToolTip(PictureBox1, "淘宝主图(400*400)")
+                End If
+            Case 418
+                If Me.Width = 418 Then
+                    ToolTip1.SetToolTip(PictureBox1, "天猫主图(418*418)")
+                End If
+            Case 220
+                If Me.Width = 220 Then
+                    ToolTip1.SetToolTip(PictureBox1, "淘宝网格(220*220)")
+                End If
+            Case 210
+                If Me.Width = 210 Then
+                    ToolTip1.SetToolTip(PictureBox1, "天猫网格(210*210)")
+                End If
+            Case 315
+                If Me.Width = 210 Then
+                    ToolTip1.SetToolTip(PictureBox1, "直通车店铺(210*315)")
+                End If
+            Case 240
+                If Me.Width = 240 Then
+                    ToolTip1.SetToolTip(PictureBox1, "直通车宝贝(240*240)")
+                End If
+            Case 270
+                If Me.Width = 270 Then
+                    ToolTip1.SetToolTip(PictureBox1, "直通车宝贝(270*270)")
+                End If
+            Case 375
+                If Me.Width = 250 Then
+                    ToolTip1.SetToolTip(PictureBox1, "直通车店铺(250*375)")
+                End If
+            Case 280
+                If Me.Width = 520 Then
+                    ToolTip1.SetToolTip(PictureBox1, "首页钻展(520*280)")
+                End If
+            Case 80
+                If Me.Width = 80 Then
+                    ToolTip1.SetToolTip(PictureBox1, "搜索页列表(80*80)")
+                End If
+            Case Else
+                ToolTip1.SetToolTip(PictureBox1, "自定义大小(" & Me.Width & "*" & Me.Height & ")")
+        End Select
     End Sub
 
     Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
@@ -220,7 +264,7 @@ Public Class Form1
                 SetDX(Lun)
             End If
         Else
-            If e.Delta > 0 Then
+            If e.Delta < 0 Then
                 Me.Top += 1
             Else
                 Me.Top -= 1

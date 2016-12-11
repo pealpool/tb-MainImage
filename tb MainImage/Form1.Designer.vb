@@ -50,6 +50,7 @@ Partial Class Form1
         Me.ByHHFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -68,6 +69,7 @@ Partial Class Form1
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, "淘宝网格(220*220)")
         '
         'ContextMenuStrip1
         '
@@ -217,6 +219,9 @@ Partial Class Form1
         Me.GbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.GbToolStripMenuItem.Text = "关闭"
         '
+        'ToolTip1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -263,4 +268,5 @@ Partial Class Form1
     Friend WithEvents ZtcbbdToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TmztToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TmwgToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
