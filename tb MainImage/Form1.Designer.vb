@@ -75,7 +75,7 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.TbztToolStripMenuItem, Me.TmztToolStripMenuItem, Me.TbwgToolStripMenuItem, Me.TmwgToolStripMenuItem, Me.ZtcbbxToolStripMenuItem, Me.ZtcbbdToolStripMenuItem, Me.ZtcdpxToolStripMenuItem, Me.ZtcdpdToolStripMenuItem, Me.SyzzToolStripMenuItem, Me.SSylbToolStripMenuItem, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 452)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 474)
         '
         'DktpToolStripMenuItem
         '
@@ -218,9 +218,6 @@ Partial Class Form1
         Me.GbToolStripMenuItem.Name = "GbToolStripMenuItem"
         Me.GbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.GbToolStripMenuItem.Text = "关闭"
-        '
-        'ToolTip1
-        '
         '
         'Form1
         '

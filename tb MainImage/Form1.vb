@@ -190,6 +190,7 @@ Public Class Form1
         Try
             Dim m_image As Image = Image.FromFile(OpenFileDialog1.FileName)
             PictureBox1.Image = m_image
+            GiveIm = False
         Catch ex As Exception
             MsgBox("没有选择正确的图片", 0, "提示")
         End Try
