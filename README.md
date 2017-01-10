@@ -3,7 +3,7 @@
 
 ---
 
-2017-01-10  增加缩放动画。
+2017-01-10：v1.1  增加缩放动画。
 
 ### 下载：
   https://raw.githubusercontent.com/pealpool/tb-MainImage/master/tb%20MainImage.exe
