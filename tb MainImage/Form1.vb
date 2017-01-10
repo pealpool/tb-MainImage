@@ -1,9 +1,11 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.Drawing.Imaging
+Imports System.Text.RegularExpressions
 Public Class Form1
     Private GiveIm As Boolean = True
     Private Lun As Integer = 3
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FormFade("in")  '打开主程序界面时的效果    
         PictureBox1.ContextMenuStrip = ContextMenuStrip1
         PictureBox1.AllowDrop = True
     End Sub
@@ -110,64 +112,63 @@ Public Class Form1
 
     Private Sub Qd()
         If IsNumeric(ToolStripTextBox1.Text) And IsNumeric(ToolStripTextBox2.Text) Then
-            ChangDX(ToolStripTextBox1.Text, ToolStripTextBox2.Text)
+            If ToolStripTextBox1.Text >= 16 And ToolStripTextBox2.Text >= 16 Then
+                ChangeDX(ToolStripTextBox1.Text, ToolStripTextBox2.Text)
+            Else
+                MsgBox("整这么小，玩儿啊？", MsgBoxStyle.SystemModal, "提示")
+            End If
         Else
-            MsgBox("请重新输入数值", 0, "提示")
+            MsgBox("请重新输入数值", MsgBoxStyle.SystemModal, "提示")
         End If
     End Sub
 
-    Private Sub ChangDX(DDDx As Integer, DDDy As Integer)
-        Me.Width = DDDx
-        Me.Height = DDDy
-    End Sub
-
     Private Sub TbztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TbztToolStripMenuItem.Click
-        ChangDX(400, 400)
+        ChangeDX(400, 400)
         Lun = 1
     End Sub
 
     Private Sub TmztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TmztToolStripMenuItem.Click
-        ChangDX(418, 418)
+        ChangeDX(418, 418)
         Lun = 2
     End Sub
 
     Private Sub TbwgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TbwgToolStripMenuItem.Click
-        ChangDX(220, 220)
+        ChangeDX(220, 220)
         Lun = 3
     End Sub
 
     Private Sub TmwgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TmwgToolStripMenuItem.Click
-        ChangDX(210, 210)
+        ChangeDX(210, 210)
         Lun = 4
     End Sub
 
     Private Sub ZtcbbxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbxToolStripMenuItem.Click
-        ChangDX(240, 240)
+        ChangeDX(240, 240)
         Lun = 5
     End Sub
 
     Private Sub ZtcbbdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbdToolStripMenuItem.Click
-        ChangDX(270, 270)
+        ChangeDX(270, 270)
         Lun = 6
     End Sub
 
     Private Sub ZtcdpxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpxToolStripMenuItem.Click
-        ChangDX(210, 315)
+        ChangeDX(210, 315)
         Lun = 7
     End Sub
 
     Private Sub ZtcdpdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpdToolStripMenuItem.Click
-        ChangDX(250, 375)
+        ChangeDX(250, 375)
         Lun = 8
     End Sub
 
     Private Sub SyzzToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SyzzToolStripMenuItem.Click
-        ChangDX(520, 280)
+        ChangeDX(520, 280)
         Lun = 9
     End Sub
 
     Private Sub SsylbToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SSylbToolStripMenuItem.Click
-        ChangDX(80, 80)
+        ChangeDX(80, 80)
         Lun = 10
     End Sub
 
@@ -192,7 +193,7 @@ Public Class Form1
             PictureBox1.Image = m_image
             GiveIm = False
         Catch ex As Exception
-            MsgBox("没有选择正确的图片", 0, "提示")
+            MsgBox("没有选择正确的图片", MsgBoxStyle.SystemModal, "提示")
         End Try
     End Sub
 
@@ -206,20 +207,21 @@ Public Class Form1
         Try
             bkimage = New Bitmap(temostr)
             'Me.Size = New System.Drawing.Size(bkimage.Width, bkimage.Height)
-            PictureBox1.Image = bkimage
-            GiveIm = False
-            If PictureBox1.Image.Height = PictureBox1.Image.Width Then
-                Me.Height = 220
-                Me.Width = 220
-                Lun = 3
-            ElseIf (PictureBox1.Image.Height = 315 And PictureBox1.Image.Width = 210) Or (PictureBox1.Image.Height = 375 And PictureBox1.Image.Width = 250) Then
-                Me.Height = 315
-                Me.Width = 210
-                Lun = 7
-            ElseIf PictureBox1.Image.Height = 280 And PictureBox1.Image.Width = 520 Then
-                Me.Height = 280
-                Me.Width = 520
-                Lun = 9
+            If bkimage.Width >= 16 And bkimage.Height >= 16 Then
+                PictureBox1.Image = bkimage
+                GiveIm = False
+                If PictureBox1.Image.Height = PictureBox1.Image.Width Then
+                    ChangeDX(200, 200)
+                    Lun = 3
+                ElseIf (PictureBox1.Image.Height = 315 And PictureBox1.Image.Width = 210) Or (PictureBox1.Image.Height = 375 And PictureBox1.Image.Width = 250) Then
+                    ChangeDX(210, 315)
+                    Lun = 7
+                ElseIf PictureBox1.Image.Height = 280 And PictureBox1.Image.Width = 520 Then
+                    ChangeDX(520, 280)
+                    Lun = 9
+                End If
+            Else
+                MsgBox("整这么小图片，玩儿啊？", MsgBoxStyle.SystemModal, "提示")
             End If
         Catch ex As Exception
         End Try
@@ -290,34 +292,34 @@ Public Class Form1
         CleanC
         Select Case L
             Case 1
-                ChangDX(400, 400)
+                ChangeDX(400, 400)
                 TbztToolStripMenuItem.Checked = True
             Case 2
-                ChangDX(418, 418)
+                ChangeDX(418, 418)
                 TmztToolStripMenuItem.Checked = True
             Case 3
-                ChangDX(220, 220)
+                ChangeDX(220, 220)
                 TbwgToolStripMenuItem.Checked = True
             Case 4
-                ChangDX(210, 210)
+                ChangeDX(210, 210)
                 TmwgToolStripMenuItem.Checked = True
             Case 5
-                ChangDX(240, 240)
+                ChangeDX(240, 240)
                 ZtcbbxToolStripMenuItem.Checked = True
             Case 6
-                ChangDX(270, 270)
+                ChangeDX(270, 270)
                 ZtcbbdToolStripMenuItem.Checked = True
             Case 7
-                ChangDX(210, 315)
+                ChangeDX(210, 315)
                 ZtcdpxToolStripMenuItem.Checked = True
             Case 8
-                ChangDX(250, 375)
+                ChangeDX(250, 375)
                 ZtcdpdToolStripMenuItem.Checked = True
             Case 9
-                ChangDX(520, 280)
+                ChangeDX(520, 280)
                 SyzzToolStripMenuItem.Checked = True
             Case 10
-                ChangDX(80, 80)
+                ChangeDX(80, 80)
                 SSylbToolStripMenuItem.Checked = True
         End Select
     End Sub
@@ -332,9 +334,9 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox1_DoubleClick(sender As Object, e As EventArgs) Handles PictureBox1.DoubleClick
-        Me.Width = PictureBox1.Image.Width
-        Me.Height = PictureBox1.Image.Height
+        ChangeDX(PictureBox1.Image.Width, PictureBox1.Image.Height)
     End Sub
+
 
     Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
         CleanC()
@@ -381,4 +383,71 @@ Public Class Form1
                 End If
         End Select
     End Sub
+
+    Private Sub SeZiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SeZiToolStripMenuItem.Click
+        Form2.Show()
+    End Sub
+
+
+    Private Sub Form1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        FormFade("out")     '关闭主程序界面时的效果    
+    End Sub
+
+    Private Sub FormFade(ByVal FType)
+        Select Case FType
+            Case ("in")
+                Dim FadeCount As Integer
+                For FadeCount = 5 To 100 Step 5
+                    Me.Opacity = FadeCount / 100
+                    Me.Refresh()
+                    Threading.Thread.Sleep(30)
+                Next
+                Me.Opacity = 100
+            Case ("out")
+                Dim FadeCount As Integer
+                For FadeCount = 100 To 5 Step -5
+                    Me.Opacity = FadeCount / 100
+                    Me.Refresh()
+                    Threading.Thread.Sleep(10)
+                Next
+                Me.Opacity = 0
+        End Select
+    End Sub
+
+    Private Sub ChangeDX(w As Integer, h As Integer)
+        Dim fiii As Integer
+        Dim FiiiW, FiiiH As Double
+        Dim fast As Integer = 8   '变化帧数
+        Dim timeee As Double = 10 / fast
+        FiiiW = Math.Abs(Me.Width - w) / fast
+        FiiiH = Math.Abs(Me.Height - h) / fast
+        For fiii = 0 To fast Step 1
+            If Me.Width > w Or Me.Height > h Then
+                Me.Width = Me.Width - FiiiW
+                Me.Height = Me.Height - FiiiH
+                If Me.Width < w Then
+                    Me.Width = w
+                End If
+                If Me.Height < h Then
+                    Me.Height = h
+                End If
+                Me.Refresh()
+            End If
+            If Me.Width < w Or Me.Height < h Then
+                Me.Width = Me.Width + FiiiW
+                Me.Height = Me.Height + FiiiH
+                If Me.Width > w Then
+                    Me.Width = w
+                End If
+                If Me.Height > h Then
+                    Me.Height = h
+                End If
+                Me.Refresh()
+            End If
+            Threading.Thread.Sleep(timeee)
+        Next
+        Me.Width = w
+        Me.Height = h
+    End Sub
+
 End Class

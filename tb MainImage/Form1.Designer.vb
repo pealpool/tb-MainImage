@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.DktpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QxdzToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,33 +46,19 @@ Partial Class Form1
         Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
         Me.QdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SeZiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ByHHFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.ErrorImage = Global.tb_MainImage.My.Resources.Resources.TBImgg
-        Me.PictureBox1.Image = Global.tb_MainImage.My.Resources.Resources.TBImg
-        Me.PictureBox1.InitialImage = Global.tb_MainImage.My.Resources.Resources.TBImg
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(220, 220)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox1, "淘宝网格(220*220)")
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.TbztToolStripMenuItem, Me.TmztToolStripMenuItem, Me.TbwgToolStripMenuItem, Me.TmwgToolStripMenuItem, Me.ZtcbbxToolStripMenuItem, Me.ZtcbbdToolStripMenuItem, Me.ZtcdpxToolStripMenuItem, Me.ZtcdpdToolStripMenuItem, Me.SyzzToolStripMenuItem, Me.SSylbToolStripMenuItem, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.TbztToolStripMenuItem, Me.TmztToolStripMenuItem, Me.TbwgToolStripMenuItem, Me.TmwgToolStripMenuItem, Me.ZtcbbxToolStripMenuItem, Me.ZtcbbdToolStripMenuItem, Me.ZtcdpxToolStripMenuItem, Me.ZtcdpdToolStripMenuItem, Me.SyzzToolStripMenuItem, Me.SSylbToolStripMenuItem, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.SeZiToolStripMenuItem, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 474)
         '
@@ -207,17 +192,40 @@ Partial Class Form1
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         Me.ToolStripMenuItem3.Size = New System.Drawing.Size(188, 6)
         '
+        'SeZiToolStripMenuItem
+        '
+        Me.SeZiToolStripMenuItem.Name = "SeZiToolStripMenuItem"
+        Me.SeZiToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.SeZiToolStripMenuItem.Text = "设置"
+        '
         'ByHHFToolStripMenuItem
         '
         Me.ByHHFToolStripMenuItem.Name = "ByHHFToolStripMenuItem"
         Me.ByHHFToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ByHHFToolStripMenuItem.Text = "By HHF v2016.12"
+        Me.ByHHFToolStripMenuItem.Text = "关于 · 帮助"
         '
         'GbToolStripMenuItem
         '
         Me.GbToolStripMenuItem.Name = "GbToolStripMenuItem"
         Me.GbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.GbToolStripMenuItem.Text = "关闭"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.ErrorImage = Global.tb_MainImage.My.Resources.Resources.TBImgg
+        Me.PictureBox1.Image = Global.tb_MainImage.My.Resources.Resources.TBImg
+        Me.PictureBox1.InitialImage = Global.tb_MainImage.My.Resources.Resources.TBImg
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(220, 220)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, "淘宝网格(220*220)")
         '
         'Form1
         '
@@ -230,11 +238,11 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "主图检视"
+        Me.Text = "主图检视 1.1"
         Me.TopMost = True
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ContextMenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -266,4 +274,5 @@ Partial Class Form1
     Friend WithEvents TmztToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TmwgToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents SeZiToolStripMenuItem As ToolStripMenuItem
 End Class
