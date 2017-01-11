@@ -167,10 +167,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TBImg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TBImgg.jpg" />
+    <None Include="Resources\h01.gif" />
+    <None Include="Resources\h02.gif" />
     <Content Include="zt.ico" />
   </ItemGroup>
   <ItemGroup>

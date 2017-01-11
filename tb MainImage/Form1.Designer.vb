@@ -168,6 +168,7 @@ Partial Class Form1
         'ToolStripTextBox1
         '
         Me.ToolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!)
         Me.ToolStripTextBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 23)
@@ -176,6 +177,7 @@ Partial Class Form1
         'ToolStripTextBox2
         '
         Me.ToolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ToolStripTextBox2.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!)
         Me.ToolStripTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
         Me.ToolStripTextBox2.Size = New System.Drawing.Size(100, 23)
@@ -216,9 +218,9 @@ Partial Class Form1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.ErrorImage = Global.tb_MainImage.My.Resources.Resources.TBImgg
-        Me.PictureBox1.Image = Global.tb_MainImage.My.Resources.Resources.TBImg
-        Me.PictureBox1.InitialImage = Global.tb_MainImage.My.Resources.Resources.TBImg
+        Me.PictureBox1.ErrorImage = Global.tb_MainImage.My.Resources.Resources.h01
+        Me.PictureBox1.Image = Global.tb_MainImage.My.Resources.Resources.h01
+        Me.PictureBox1.InitialImage = Global.tb_MainImage.My.Resources.Resources.h01
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(220, 220)

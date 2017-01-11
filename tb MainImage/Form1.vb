@@ -27,7 +27,7 @@ Public Class Form1
 
     Private Sub PictureBox1_MouseEnter(sender As Object, e As EventArgs) Handles PictureBox1.MouseEnter
         If GiveIm Then
-            PictureBox1.Image = Global.tb_MainImage.My.Resources.TBImgg
+            PictureBox1.Image = Global.tb_MainImage.My.Resources.h02
         End If
         Select Case Me.Height
             Case 400
@@ -77,7 +77,7 @@ Public Class Form1
 
     Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
         If GiveIm Then
-            PictureBox1.Image = Global.tb_MainImage.My.Resources.TBImg
+            PictureBox1.Image = Global.tb_MainImage.My.Resources.h01
         End If
     End Sub
 
@@ -211,7 +211,7 @@ Public Class Form1
                 PictureBox1.Image = bkimage
                 GiveIm = False
                 If PictureBox1.Image.Height = PictureBox1.Image.Width Then
-                    ChangeDX(200, 200)
+                    ChangeDX(220, 220)
                     Lun = 3
                 ElseIf (PictureBox1.Image.Height = 315 And PictureBox1.Image.Width = 210) Or (PictureBox1.Image.Height = 375 And PictureBox1.Image.Width = 250) Then
                     ChangeDX(210, 315)
