@@ -2,13 +2,14 @@
 ## 淘宝主图测试工具
 
 ---
+2018-10-12：v2.0.0   增加常用规格。优化切换大小。
 
 2017-01-11：v1.1.1   美化默认封面。
 
 2017-01-10：v1.1     增加缩放动画。
 
 ### 下载：
-  https://raw.githubusercontent.com/pealpool/tb-MainImage/master/tb%20MainImage.exe
+  https://github.com/pealpool/tb-MainImage/blob/master/tb%20MainImage%20v18.10.12.exe
   
 ---
 
