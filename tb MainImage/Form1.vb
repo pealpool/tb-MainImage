@@ -2,7 +2,7 @@
 Imports System.Text.RegularExpressions
 Public Class Form1
     Private GiveIm As Boolean = True
-    Private Lun As Integer = 3
+    Private Lun As Integer = 4
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormFade("in")  '打开主程序界面时的效果    
@@ -38,17 +38,25 @@ Public Class Form1
                 If Me.Width = 418 Then
                     ToolTip1.SetToolTip(PictureBox1, "天猫主图(418*418)")
                 End If
+            Case 180
+                If Me.Width = 180 Then
+                    ToolTip1.SetToolTip(PictureBox1, "淘宝搜索(180*180)")
+                End If
             Case 220
                 If Me.Width = 220 Then
-                    ToolTip1.SetToolTip(PictureBox1, "淘宝网格(220*220)")
+                    ToolTip1.SetToolTip(PictureBox1, "淘宝搜索(220*220)")
+                End If
+            Case 250
+                If Me.Width = 250 Then
+                    ToolTip1.SetToolTip(PictureBox1, "淘宝搜索(250*250)")
                 End If
             Case 210
                 If Me.Width = 210 Then
-                    ToolTip1.SetToolTip(PictureBox1, "天猫网格(210*210)")
+                    ToolTip1.SetToolTip(PictureBox1, "天猫搜索(210*210)")
                 End If
-            Case 315
-                If Me.Width = 210 Then
-                    ToolTip1.SetToolTip(PictureBox1, "直通车店铺(210*315)")
+            Case 200
+                If Me.Width = 200 Then
+                    ToolTip1.SetToolTip(PictureBox1, "直通车宝贝(200*200)")
                 End If
             Case 240
                 If Me.Width = 240 Then
@@ -57,6 +65,10 @@ Public Class Form1
             Case 270
                 If Me.Width = 270 Then
                     ToolTip1.SetToolTip(PictureBox1, "直通车宝贝(270*270)")
+                End If
+            Case 315
+                If Me.Width = 210 Then
+                    ToolTip1.SetToolTip(PictureBox1, "直通车店铺(210*315)")
                 End If
             Case 375
                 If Me.Width = 250 Then
@@ -122,52 +134,62 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub TbztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TbztToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_ZtTb_400_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_ZtTb_400.Click
         ChangeDX(400, 400)
         Lun = 1
     End Sub
 
-    Private Sub TmztToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TmztToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_ZtTm_418_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_ZtTm_418.Click
         ChangeDX(418, 418)
         Lun = 2
     End Sub
 
-    Private Sub TbwgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TbwgToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_SeachTb_180_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_SeachTb_180.Click
+        ChangeDX(180, 180)
+        Lun = 3
+    End Sub
+
+    Private Sub ToolStripMenuItem_SeachTb_220_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_SeachTb_220.Click
         ChangeDX(220, 220)
         Lun = 3
     End Sub
 
-    Private Sub TmwgToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TmwgToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_SeachTb_250_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_SeachTb_250.Click
+        ChangeDX(250, 250)
+        Lun = 3
+    End Sub
+
+    Private Sub ToolStripMenuItem_SeachTm_210_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_SeachTm_210.Click
         ChangeDX(210, 210)
         Lun = 4
     End Sub
 
-    Private Sub ZtcbbxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbxToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_ztcbb_240_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_ztcbb_240.Click
         ChangeDX(240, 240)
         Lun = 5
     End Sub
 
-    Private Sub ZtcbbdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcbbdToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_ztcbb_270_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_ztcbb_270.Click
         ChangeDX(270, 270)
         Lun = 6
     End Sub
 
-    Private Sub ZtcdpxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpxToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_ztcShop_210315_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_ztcShop_210315.Click
         ChangeDX(210, 315)
         Lun = 7
     End Sub
 
-    Private Sub ZtcdpdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZtcdpdToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_ztcShop_250375_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_ztcShop_250375.Click
         ChangeDX(250, 375)
         Lun = 8
     End Sub
 
-    Private Sub SyzzToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SyzzToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_zz_520280_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_zz_520280.Click
         ChangeDX(520, 280)
         Lun = 9
     End Sub
 
-    Private Sub SsylbToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SSylbToolStripMenuItem.Click
+    Private Sub ToolStripMenuItem_SeachLb_80_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem_SeachLb_80.Click
         ChangeDX(80, 80)
         Lun = 10
     End Sub
@@ -252,7 +274,7 @@ Public Class Form1
             End If
         ElseIf ModifierKeys = Keys.Shift Then
             If e.Delta < 0 Then
-                If Lun >= 10 Then
+                If Lun >= 13 Then
                     Lun = 1
                 Else
                     Lun += 1
@@ -260,7 +282,7 @@ Public Class Form1
                 SetDX(Lun)
             Else
                 If Lun <= 1 Then
-                    Lun = 10
+                    Lun = 13
                 Else
                     Lun -= 1
                 End If
@@ -276,56 +298,69 @@ Public Class Form1
     End Sub
 
     Private Sub CleanC()
-        TbztToolStripMenuItem.Checked = False
-        TmztToolStripMenuItem.Checked = False
-        TbwgToolStripMenuItem.Checked = False
-        TmwgToolStripMenuItem.Checked = False
-        ZtcbbxToolStripMenuItem.Checked = False
-        ZtcbbdToolStripMenuItem.Checked = False
-        ZtcdpxToolStripMenuItem.Checked = False
-        ZtcdpdToolStripMenuItem.Checked = False
-        SyzzToolStripMenuItem.Checked = False
-        SSylbToolStripMenuItem.Checked = False
+        ToolStripMenuItem_ZtTb_400.Checked = False
+        ToolStripMenuItem_ZtTm_418.Checked = False
+        ToolStripMenuItem_SeachTb_180.Checked = False
+        ToolStripMenuItem_SeachTb_220.Checked = False
+        ToolStripMenuItem_SeachTb_250.Checked = False
+        ToolStripMenuItem_SeachTm_210.Checked = False
+        ToolStripMenuItem_ztcbb_200.Checked = False
+        ToolStripMenuItem_ztcbb_240.Checked = False
+        ToolStripMenuItem_ztcbb_270.Checked = False
+        ToolStripMenuItem_ztcShop_210315.Checked = False
+        ToolStripMenuItem_ztcShop_250375.Checked = False
+        ToolStripMenuItem_zz_520280.Checked = False
+        ToolStripMenuItem_SeachLb_80.Checked = False
     End Sub
 
     Private Sub SetDX(L As Integer)
-        CleanC
+        CleanC()
+
         Select Case L
             Case 1
-                ChangeDX(400, 400)
-                TbztToolStripMenuItem.Checked = True
+                ChangeDX(80, 80)
+                ToolStripMenuItem_SeachLb_80.Checked = True
             Case 2
-                ChangeDX(418, 418)
-                TmztToolStripMenuItem.Checked = True
+                ChangeDX(180, 180)
+                ToolStripMenuItem_SeachTb_180.Checked = True
             Case 3
-                ChangeDX(220, 220)
-                TbwgToolStripMenuItem.Checked = True
+                ChangeDX(200, 200)
+                ToolStripMenuItem_ztcbb_200.Checked = True
             Case 4
                 ChangeDX(210, 210)
-                TmwgToolStripMenuItem.Checked = True
+                ToolStripMenuItem_SeachTm_210.Checked = True
             Case 5
-                ChangeDX(240, 240)
-                ZtcbbxToolStripMenuItem.Checked = True
+                ChangeDX(220, 220)
+                ToolStripMenuItem_SeachTb_220.Checked = True
             Case 6
-                ChangeDX(270, 270)
-                ZtcbbdToolStripMenuItem.Checked = True
+                ChangeDX(240, 240)
+                ToolStripMenuItem_ztcbb_240.Checked = True
             Case 7
-                ChangeDX(210, 315)
-                ZtcdpxToolStripMenuItem.Checked = True
+                ChangeDX(250, 250)
+                ToolStripMenuItem_SeachTb_250.Checked = True
             Case 8
-                ChangeDX(250, 375)
-                ZtcdpdToolStripMenuItem.Checked = True
+                ChangeDX(270, 270)
+                ToolStripMenuItem_ztcbb_270.Checked = True
             Case 9
-                ChangeDX(520, 280)
-                SyzzToolStripMenuItem.Checked = True
+                ChangeDX(400, 400)
+                ToolStripMenuItem_ZtTb_400.Checked = True
             Case 10
-                ChangeDX(80, 80)
-                SSylbToolStripMenuItem.Checked = True
+                ChangeDX(418, 418)
+                ToolStripMenuItem_ZtTm_418.Checked = True
+            Case 11
+                ChangeDX(210, 315)
+                ToolStripMenuItem_ztcShop_210315.Checked = True
+            Case 12
+                ChangeDX(250, 375)
+                ToolStripMenuItem_ztcShop_250375.Checked = True
+            Case 13
+                ChangeDX(520, 280)
+                ToolStripMenuItem_zz_520280.Checked = True
         End Select
     End Sub
 
     Private Sub ByHHFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByHHFToolStripMenuItem.Click
-        MsgBox("▶ [　双击　]　　　　匹配原图大小" & vbCrLf & "▶ [鼠标滚轮]　　　　微调 上下" & vbCrLf & "▶ [Ctrl + 鼠标滚轮]　微调 左右" & vbCrLf & "▶ [Shift + 鼠标滚轮]  选择大小" & vbCrLf & vbCrLf & "By HHF v2016.12", 0, "关于 主图检视 By HHF")
+        MsgBox("▶ [　双击　]　　　　匹配原图大小" & vbCrLf & "▶ [鼠标滚轮]　　　　微调 上下" & vbCrLf & "▶ [Ctrl + 鼠标滚轮]　微调 左右" & vbCrLf & "▶ [Shift + 鼠标滚轮]  选择大小" & vbCrLf & vbCrLf & "By HHF v2018.10.12", 0, "关于 主图检视 By HHF")
     End Sub
 
     Private Sub PptpdxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PptpdxToolStripMenuItem.Click
@@ -343,43 +378,55 @@ Public Class Form1
         Select Case Me.Height
             Case 400
                 If Me.Width = 400 Then
-                    TbztToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_ZtTb_400.Checked = True
                 End If
             Case 418
                 If Me.Width = 418 Then
-                    TmztToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_ZtTm_418.Checked = True
+                End If
+            Case 180
+                If Me.Width = 180 Then
+                    ToolStripMenuItem_SeachTb_180.Checked = True
                 End If
             Case 220
                 If Me.Width = 220 Then
-                    TbwgToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_SeachTb_220.Checked = True
+                End If
+            Case 250
+                If Me.Width = 250 Then
+                    ToolStripMenuItem_SeachTb_250.Checked = True
                 End If
             Case 210
                 If Me.Width = 210 Then
-                    TmwgToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_SeachTm_210.Checked = True
                 End If
             Case 315
                 If Me.Width = 210 Then
-                    ZtcdpxToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_ztcShop_210315.Checked = True
+                End If
+            Case 200
+                If Me.Width = 200 Then
+                    ToolStripMenuItem_ztcbb_200.Checked = True
                 End If
             Case 240
                 If Me.Width = 240 Then
-                    ZtcbbxToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_ztcbb_240.Checked = True
                 End If
             Case 270
                 If Me.Width = 270 Then
-                    ZtcbbdToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_ztcbb_270.Checked = True
                 End If
             Case 375
                 If Me.Width = 250 Then
-                    ZtcdpdToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_ztcShop_250375.Checked = True
                 End If
             Case 280
                 If Me.Width = 520 Then
-                    SyzzToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_zz_520280.Checked = True
                 End If
             Case 80
                 If Me.Width = 80 Then
-                    SSylbToolStripMenuItem.Checked = True
+                    ToolStripMenuItem_SeachLb_80.Checked = True
                 End If
         End Select
     End Sub

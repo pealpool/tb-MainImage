@@ -29,16 +29,19 @@ Partial Class Form1
         Me.QxdzToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XsbgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.TbztToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TmztToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TbwgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TmwgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZtcbbxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZtcbbdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZtcdpxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZtcdpdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SyzzToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SSylbToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ZtTb_400 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ZtTm_418 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_SeachTb_180 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_SeachTb_220 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_SeachTb_250 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_SeachTm_210 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ztcbb_200 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ztcbb_240 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ztcbb_270 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ztcShop_210315 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_ztcShop_250375 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_zz_520280 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_SeachLb_80 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripSeparator()
         Me.PptpdxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
@@ -58,9 +61,9 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.TbztToolStripMenuItem, Me.TmztToolStripMenuItem, Me.TbwgToolStripMenuItem, Me.TmwgToolStripMenuItem, Me.ZtcbbxToolStripMenuItem, Me.ZtcbbdToolStripMenuItem, Me.ZtcdpxToolStripMenuItem, Me.ZtcdpdToolStripMenuItem, Me.SyzzToolStripMenuItem, Me.SSylbToolStripMenuItem, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.SeZiToolStripMenuItem, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DktpToolStripMenuItem, Me.QxdzToolStripMenuItem, Me.XsbgToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem_ZtTb_400, Me.ToolStripMenuItem_ZtTm_418, Me.ToolStripMenuItem_SeachTb_180, Me.ToolStripMenuItem_SeachTb_220, Me.ToolStripMenuItem_SeachTb_250, Me.ToolStripMenuItem_SeachTm_210, Me.ToolStripMenuItem_ztcbb_200, Me.ToolStripMenuItem_ztcbb_240, Me.ToolStripMenuItem_ztcbb_270, Me.ToolStripMenuItem_ztcShop_210315, Me.ToolStripMenuItem_ztcShop_250375, Me.ToolStripMenuItem_zz_520280, Me.ToolStripMenuItem_SeachLb_80, Me.ToolStripMenuItem4, Me.PptpdxToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripTextBox1, Me.ToolStripTextBox2, Me.QdToolStripMenuItem, Me.ToolStripMenuItem3, Me.SeZiToolStripMenuItem, Me.ByHHFToolStripMenuItem, Me.GbToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 474)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(192, 540)
         '
         'DktpToolStripMenuItem
         '
@@ -87,67 +90,85 @@ Partial Class Form1
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(188, 6)
         '
-        'TbztToolStripMenuItem
+        'ToolStripMenuItem_ZtTb_400
         '
-        Me.TbztToolStripMenuItem.Name = "TbztToolStripMenuItem"
-        Me.TbztToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.TbztToolStripMenuItem.Text = "淘宝主图(400*400)"
+        Me.ToolStripMenuItem_ZtTb_400.Name = "ToolStripMenuItem_ZtTb_400"
+        Me.ToolStripMenuItem_ZtTb_400.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ZtTb_400.Text = "主图淘宝(400*400)"
         '
-        'TmztToolStripMenuItem
+        'ToolStripMenuItem_ZtTm_418
         '
-        Me.TmztToolStripMenuItem.Name = "TmztToolStripMenuItem"
-        Me.TmztToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.TmztToolStripMenuItem.Text = "天猫主图(418*418)"
+        Me.ToolStripMenuItem_ZtTm_418.Name = "ToolStripMenuItem_ZtTm_418"
+        Me.ToolStripMenuItem_ZtTm_418.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ZtTm_418.Text = "主图天猫(418*418)"
         '
-        'TbwgToolStripMenuItem
+        'ToolStripMenuItem_SeachTb_180
         '
-        Me.TbwgToolStripMenuItem.Checked = True
-        Me.TbwgToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.TbwgToolStripMenuItem.Name = "TbwgToolStripMenuItem"
-        Me.TbwgToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.TbwgToolStripMenuItem.Text = "淘宝网格(220*220)"
+        Me.ToolStripMenuItem_SeachTb_180.Name = "ToolStripMenuItem_SeachTb_180"
+        Me.ToolStripMenuItem_SeachTb_180.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_SeachTb_180.Text = "搜索淘宝(180*180)"
         '
-        'TmwgToolStripMenuItem
+        'ToolStripMenuItem_SeachTb_220
         '
-        Me.TmwgToolStripMenuItem.Name = "TmwgToolStripMenuItem"
-        Me.TmwgToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.TmwgToolStripMenuItem.Text = "天猫网格(210*210)"
+        Me.ToolStripMenuItem_SeachTb_220.Checked = True
+        Me.ToolStripMenuItem_SeachTb_220.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToolStripMenuItem_SeachTb_220.Name = "ToolStripMenuItem_SeachTb_220"
+        Me.ToolStripMenuItem_SeachTb_220.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_SeachTb_220.Text = "搜索淘宝(220*220)"
         '
-        'ZtcbbxToolStripMenuItem
+        'ToolStripMenuItem_SeachTb_250
         '
-        Me.ZtcbbxToolStripMenuItem.Name = "ZtcbbxToolStripMenuItem"
-        Me.ZtcbbxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ZtcbbxToolStripMenuItem.Text = "直通车宝贝(240*240)"
+        Me.ToolStripMenuItem_SeachTb_250.Name = "ToolStripMenuItem_SeachTb_250"
+        Me.ToolStripMenuItem_SeachTb_250.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_SeachTb_250.Text = "搜索淘宝(250*250)"
         '
-        'ZtcbbdToolStripMenuItem
+        'ToolStripMenuItem_SeachTm_210
         '
-        Me.ZtcbbdToolStripMenuItem.Name = "ZtcbbdToolStripMenuItem"
-        Me.ZtcbbdToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ZtcbbdToolStripMenuItem.Text = "直通车宝贝(270*270)"
+        Me.ToolStripMenuItem_SeachTm_210.Name = "ToolStripMenuItem_SeachTm_210"
+        Me.ToolStripMenuItem_SeachTm_210.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_SeachTm_210.Text = "搜索天猫(210*210)"
         '
-        'ZtcdpxToolStripMenuItem
+        'ToolStripMenuItem_ztcbb_200
         '
-        Me.ZtcdpxToolStripMenuItem.Name = "ZtcdpxToolStripMenuItem"
-        Me.ZtcdpxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ZtcdpxToolStripMenuItem.Text = "直通车店铺(210*315)"
+        Me.ToolStripMenuItem_ztcbb_200.Name = "ToolStripMenuItem_ztcbb_200"
+        Me.ToolStripMenuItem_ztcbb_200.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ztcbb_200.Text = "直通车宝贝(200*200)"
         '
-        'ZtcdpdToolStripMenuItem
+        'ToolStripMenuItem_ztcbb_240
         '
-        Me.ZtcdpdToolStripMenuItem.Name = "ZtcdpdToolStripMenuItem"
-        Me.ZtcdpdToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ZtcdpdToolStripMenuItem.Text = "直通车店铺(250*375)"
+        Me.ToolStripMenuItem_ztcbb_240.Name = "ToolStripMenuItem_ztcbb_240"
+        Me.ToolStripMenuItem_ztcbb_240.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ztcbb_240.Text = "直通车宝贝(240*240)"
         '
-        'SyzzToolStripMenuItem
+        'ToolStripMenuItem_ztcbb_270
         '
-        Me.SyzzToolStripMenuItem.Name = "SyzzToolStripMenuItem"
-        Me.SyzzToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.SyzzToolStripMenuItem.Text = "首页钻展(520*280)"
+        Me.ToolStripMenuItem_ztcbb_270.Name = "ToolStripMenuItem_ztcbb_270"
+        Me.ToolStripMenuItem_ztcbb_270.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ztcbb_270.Text = "直通车宝贝(270*270)"
         '
-        'SSylbToolStripMenuItem
+        'ToolStripMenuItem_ztcShop_210315
         '
-        Me.SSylbToolStripMenuItem.Name = "SSylbToolStripMenuItem"
-        Me.SSylbToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.SSylbToolStripMenuItem.Text = "搜索页列表(80*80)"
+        Me.ToolStripMenuItem_ztcShop_210315.Name = "ToolStripMenuItem_ztcShop_210315"
+        Me.ToolStripMenuItem_ztcShop_210315.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ztcShop_210315.Text = "直通车店铺(210*315)"
+        '
+        'ToolStripMenuItem_ztcShop_250375
+        '
+        Me.ToolStripMenuItem_ztcShop_250375.Name = "ToolStripMenuItem_ztcShop_250375"
+        Me.ToolStripMenuItem_ztcShop_250375.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_ztcShop_250375.Text = "直通车店铺(250*375)"
+        '
+        'ToolStripMenuItem_zz_520280
+        '
+        Me.ToolStripMenuItem_zz_520280.Name = "ToolStripMenuItem_zz_520280"
+        Me.ToolStripMenuItem_zz_520280.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_zz_520280.Text = "首页钻展(520*280)"
+        '
+        'ToolStripMenuItem_SeachLb_80
+        '
+        Me.ToolStripMenuItem_SeachLb_80.Name = "ToolStripMenuItem_SeachLb_80"
+        Me.ToolStripMenuItem_SeachLb_80.Size = New System.Drawing.Size(191, 22)
+        Me.ToolStripMenuItem_SeachLb_80.Text = "搜索页列表(80*80)"
         '
         'ToolStripMenuItem4
         '
@@ -168,7 +189,6 @@ Partial Class Form1
         'ToolStripTextBox1
         '
         Me.ToolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!)
         Me.ToolStripTextBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 23)
@@ -177,7 +197,6 @@ Partial Class Form1
         'ToolStripTextBox2
         '
         Me.ToolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ToolStripTextBox2.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!)
         Me.ToolStripTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
         Me.ToolStripTextBox2.Size = New System.Drawing.Size(100, 23)
@@ -256,12 +275,12 @@ Partial Class Form1
     Friend WithEvents QxdzToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents XsbgToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
-    Friend WithEvents TbztToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TbwgToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ZtcbbxToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ZtcdpxToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SyzzToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SSylbToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ZtTb_400 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_SeachTb_220 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ztcbb_240 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ztcShop_210315 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_zz_520280 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_SeachLb_80 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
     Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
     Friend WithEvents ToolStripTextBox2 As ToolStripTextBox
@@ -271,10 +290,13 @@ Partial Class Form1
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ToolStripMenuItem4 As ToolStripSeparator
     Friend WithEvents PptpdxToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ZtcdpdToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ZtcbbdToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TmztToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TmwgToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ztcShop_250375 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ztcbb_270 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ZtTm_418 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_SeachTm_210 As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents SeZiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_SeachTb_180 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_SeachTb_250 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem_ztcbb_200 As ToolStripMenuItem
 End Class
